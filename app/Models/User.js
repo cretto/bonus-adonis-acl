@@ -32,6 +32,10 @@ class User extends Model {
     return this.hasMany('App/Models/Token')
   }
 
+  posts () {
+    return this.hasMany('App/Models/Post')
+  }
+
   static get traits () {
     return [
       '@provider:Adonis/Acl/HasRole',

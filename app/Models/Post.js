@@ -3,8 +3,8 @@
 const Model = use('Model')
 
 class Post extends Model {
-  async user () {
-    return this.belongsTo('App/Models/Post')
+  user () {
+    return this.belongsTo('App/Models/User')
   }
 }
 

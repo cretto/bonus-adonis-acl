@@ -13,6 +13,7 @@ class PostController {
 
     const posts = await Post.query()
       .where({ type: 'public' })
+      .with('user')
       .fetch()
 
     return posts

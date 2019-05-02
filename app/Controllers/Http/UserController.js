@@ -4,9 +4,10 @@ const User = use('App/Models/User')
 
 class UserController {
   async index () {
-    const users = User.query()
+    const users = await User.query()
       .with('permissions')
       .with('roles')
+      .with('posts')
       .fetch()
 
     return users
